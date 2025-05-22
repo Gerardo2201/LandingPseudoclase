@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bodybackground: #1fa975;
+    --colorsegundario: #1a9264;
+    --margin: 70px;
+    --margin2: 160px;
+
+}
+
+body{
+    background-color: var(--bodybackground);
+ 
+    
+}
+
+.cuadroblanco{
+    width: 160vh;
+    height: 80vh;
+    background-color: #fff;
+    margin: var(--margin) auto; 
+    position: relative;
+}
+
+li{
+   list-style-type: none; 
+}
+
+ul li p{
+    display: inline;
+    margin-left: var(--margin2);
+    white-space: nowrap;
+    line-height: 115px;
+    
+}
+
+.barralateral{
+    width: 5%;
+    height: 100%;
+    background-color: green; 
+}
+
+.barralateral{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+li p:last-of-type{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--colorsegundario);
+    
+    
+}
+
+li p:last-of-type::before{
+    position: relative;
+    font-family: "remixicon";
+    content: "\f2bb";
+    font-size: 32px;
+    left: -10px;
+    bottom: -4px; 
+    
+
+}
+
+.barralateral .iconos{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.icono_home::before{
+    position: relative;
+    margin-left: 15px;
+    top: 35px;
+    font-family: "remixicon";
+    content: "\f578";
+    font-size: 45px;
+    color: var(--bodybackground);    
+}
+
+.icono_youtube
