@@ -1,35 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho/alto */
 }
 
-:root{
-    --bodybackground: #1fa975;
-    --iconos: #1a9264;
-    --barralateral: #08544c;
-    --margincuadroblanco: 70px;
-    font-size: 16px; /* base para rem */
-    --marginleftselecciones: 10rem; /* 160px → rem */
-    --marginlefticonos: 1.375rem; /* 22px → rem */
-    --positionrelativetopiconos: 28.125rem; /* 450px → rem */
-    --fontsizeiconohome: 2.8rem; /* 45px → rem */
-    --fontsizeiconos: 2.375rem; /* 38px → rem */
-
+:root {
+    /* Variables CSS para una paleta y layout consistente */
+    --bodybackground: #1fa975;          /* Fondo general de la página */
+    --iconos: #1a9264;                  /* Color de íconos */
+    --barralateral: #08544c;           /* Fondo de la barra lateral */
+    --margincuadroblanco: 70px;        /* Separación vertical del contenedor blanco */
+    --marginleftselecciones: 10rem;    /* Espaciado entre los ítems del menú */
+    --marginlefticonos: 1.375rem;      /* Margen izquierdo para íconos de redes */
+    --positionrelativetopiconos: 28.125rem; /* Posición vertical de los íconos */
+    --fontsizeiconohome: 2.8rem;       /* Tamaño del ícono 'home' */
+    --fontsizeiconos: 2.375rem;        /* Tamaño general para íconos sociales */
+    
+    font-size: 16px; /* Base de rem = 16px */
 }
-
+/* Reset de márgenes y paddings */
 body{
-    background-color: var(--bodybackground);
+    background-color: var(--bodybackground); /* Fondo verde institucional */
  
     
 }
-
+/* Estilo para el encabezado */
 .titulo h1{
     text-align: center;
     color: white;
     font-weight: bold;
 }
 
+ /* Estilo para el contenedor principal */      
 .cuadroblanco{
     width: 90%;
     max-width: 1600px;
@@ -38,12 +40,14 @@ body{
     background-color: #fff;
     margin: var(--margincuadroblanco) auto; 
     position: relative;
+    box-shadow: 0 0 10px black;
 }
 
 li{
-   list-style-type: none; 
+   list-style-type: none;  /* Sin viñetas */
 }
 
+/* Estilo para el menú de navegación */
 ul li p{
     display: inline;
     margin-left: var(--marginleftselecciones);
@@ -52,13 +56,13 @@ ul li p{
     position: static;
     
 }
-
+/* Contenedor de íconos en vertical */
 .barralateral{
     width: 5%;
     height: 100%;
     background-color: var(--barralateral); 
 }
-
+/* Estilo para los íconos de redes sociales */
 .barralateral{
     position: absolute;
     top: 0;
@@ -66,6 +70,7 @@ ul li p{
     
 }
 
+/* Último párrafo = teléfono de contacto */
 li p:last-of-type{
     font-weight: bold;
     font-size: 20px;
@@ -73,25 +78,25 @@ li p:last-of-type{
     
     
 }
-
+/* Icono de teléfono */
 li p:last-of-type::before{
     position: relative;
     font-family: "remixicon";
-    content: "\f2bb";
+    content: "\f2bb";  /* Ícono de teléfono */
     font-size: 32px;
     left: -10px;
     bottom: -4px; 
     
 
 }
-
+/* Iconos de redes sociales */
 .barralateral .iconos{
     position: absolute;
     width: 100%;
     height: 100%;
     
 }
-
+/* Reglas similares para cada red social */
 .icono_home::before{
     position: relative;
     margin-left: 15px;
@@ -101,7 +106,7 @@ li p:last-of-type::before{
     font-size: 45px;
     color: var(--iconos);    
 }
-
+/* Icono de Facebook */
 .icono_twitter:before{
     position: relative;
     margin-left: 23px;
@@ -112,6 +117,8 @@ li p:last-of-type::before{
     font-size: 38px;
     color: var(--iconos);   
 }
+
+/* Icono de Twitter */
 .icono_facebook:before{
     position: relative;
     margin-left: 15px;
@@ -122,6 +129,8 @@ li p:last-of-type::before{
     font-size: 45px;
     color: var(--iconos);   
 }
+
+/* Icono de WhatsApp */
 .icono_instagram:before{
     position: relative;
     margin-left: var(--marginlefticonos);
@@ -132,6 +141,8 @@ li p:last-of-type::before{
     font-size: var(--fontsizeiconos);
     color: var(--iconos);   
 }
+
+/* Icono de Instagram */
 .icono_youtube:before{
     position: relative;
     margin-left: var(--marginlefticonos);
@@ -143,6 +154,7 @@ li p:last-of-type::before{
     color: var(--iconos);   
 }
 
+
 .icono{
     margin-top: 20px;
 }
@@ -152,10 +164,12 @@ li p:last-of-type::before{
 
 /* Caja interna */
 .contenido-principal {
-  width: 100%;
-  height: 70%;
+  width: 94%;
+  height: 90%;
   display: inline-block;
   font-size: 0;
+  box-shadow: 0 0 5px black;
+  margin-left: 5%;
 }
 
 /* Divisiones */
@@ -169,14 +183,17 @@ li p:last-of-type::before{
   position: relative;
 }
 
+/* Estilo para el contenedor de la imagen */
 .form-container{
     position: relative;
     left: 900px;
-    bottom: 530px;
+    bottom: 660px;
     height: 600px;
+    
     
 }
 
+/* Estilo para la imagen */
 .img{
     position: relative;
     left: 180px;
@@ -192,6 +209,7 @@ li p:last-of-type::before{
   display: block;
 }
 
+/* Overlay verde */
 .overlay-verde {
   position: absolute;
   top: 0;
@@ -212,6 +230,7 @@ li p:last-of-type::before{
   max-width: 80%;
 }
 
+/* Texto dentro del overlay */
 .sobreimagen h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -240,7 +259,7 @@ li p:last-of-type::before{
   line-height: 24px;  
   
 }
-
+/* Botón de envío */
 .sobreimagen button::after{
     font-family: "remixicon";
     content: "\f008";
@@ -251,6 +270,7 @@ li p:last-of-type::before{
 
 }
 
+/* Efecto hover para el botón */
 .sobreimagen button:hover{
     border: 2px solid var(--iconos);
     background-color: transparent;
@@ -262,10 +282,12 @@ li p:last-of-type::before{
   margin-top: 1.5rem;
 }
 
+/* Indicadores de radio */
 .indicadores input[type="radio"] {
   display: none;
 }
 
+/* Indicadores de radio personalizados */
 .indicadores label {
   display: inline-block;
   width: 14px;
@@ -276,17 +298,19 @@ li p:last-of-type::before{
   cursor: pointer;
 }
 
+/* Efecto hover para los indicadores */
 .indicadores input:checked + label {
   background-color: #fff;
 }
 
 /* Formulario */
 .form-container {
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   background-color: #fff;
   color: #333;
 }
 
+/* Estilo para el formulario */
 .form-container h2 {
   text-align: center;
   font-size: 1.8rem;
@@ -294,20 +318,24 @@ li p:last-of-type::before{
   margin-bottom: 2rem;
 }
 
+/* Estilo para el formulario de cita */
 .appointment-form {
   width: 100%;
 }
 
+/* Estilo para los campos del formulario */
 .form-group {
   margin-bottom: 1rem;
 }
 
+/* Estilo para las etiquetas de los campos */
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 0.4rem;
 }
 
+/* Estilo para los campos de entrada */
 input {
   width: 100%;
   padding: 12px 16px;
@@ -316,7 +344,7 @@ input {
   background: #f0f0f0;
   font-size: 1rem;
 }
-
+/* Estilo para los campos de entrada al hacer foco */
 .submit-btn {
   background-color: #1a9264;
   color: white;
@@ -331,6 +359,7 @@ input {
   border: 2px solid var(--iconos);
 }
 
+/* Efecto hover para el botón de envío */
 .submit-btn::after{
      font-family: "remixicon";
     content: "\f008";
@@ -340,7 +369,7 @@ input {
     top: 5px;
 
 }
-
+/* Efecto hover para el botón de envío */
 .submit-btn:hover{
     border: 2px solid var(--iconos);
     background-color: transparent;
@@ -348,7 +377,7 @@ input {
     
 }
 
-
+/* Estilo para los campos de entrada al hacer foco */
 input[placeholder]{
     font-style: italic;
 }
